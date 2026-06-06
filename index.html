@@ -25,7 +25,7 @@
         </div>
       </div>
       <!-- Icono -->
-      <div class=" p-2 z-10 relative ">
+      <div class=" p-2 z-10 relative">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="size-7 ">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -50,13 +50,30 @@
     <!-- Vista inicial de la pagina. -->
     <section class="w-full flex-1 flex">
       <!-- Contenedor del svg -->
-      <div class="absolute top-[28%] left-1/2 -translate-1/2 flex flex-col items-center -z-1">
-        <svg viewBox="0 0 500 350" class="w-sm h-auto">
+      <div class="absolute top-[28%] left-1/2 -translate-1/2 flex flex-col items-center -z-1
+      min-[575px]:top-[27%] 
+      sm:top-[23%] 
+      md:top-[27%]
+      lg:top-[28%] lg:left-[60%]
+      xl:top-[33%]">
+        <svg viewBox="0 0 500 350" class=" relative h-auto
+        w-sm
+        sm:w-xs
+        md:w-sm
+        lg:w-sm
+        xl:w-md
+        ">
           <!-- Tema o titulo -->
           <path id="riel-titulo" d="M 50,120 C 45,200 430,140 470,260" fill="none" stroke="none" />
           <!-- subtema  -->
           <path id="riel-subtema" d="M 10,180 C 5,230 400,200 470,330" fill="none" stroke="none" stroke-width="2" />
-          <text class="font-estrella fill-text tracking-widest text-9xl font-normal">
+          <text class="font-estrella fill-text tracking-wide font-normal
+          text-9xl
+          sm:text-[160px]
+          md:text-[160px]
+          lg:text-[140px]
+          xl:text-[180px]
+          ">
             <textPath href="#riel-titulo" startOffset="5%">
               PitCrew
             </textPath>
@@ -72,12 +89,12 @@
 
       <div class="w-full h-[280px] relative ">
         <div class="w-[720px] h-auto absolute top-[58%] -right-1/4 
-        min-[300px]:top-[80%] 
-        min-[410px]:right-[-20%] min-[400px]:top-[85%] 
+        min-[300px]:top-[65%] 
+        min-[410px]:right-[-20%] min-[400px]:top-[70%] 
         min-[575px]:right-[-10%] 
-        <!-- d -->
-        sm:right-[0%] sm:w-[900px] sm:top-[65%] 
-        lg:w-[1000px] lg:right-[25%]
+        sm:right-[0%] sm:w-[900px] sm:top-[55%] 
+        md:top-[65%]
+        lg:w-[1000px] lg:right-[25%] lg:top-[50%]
         xl:right-[34%] xl:w-[1100px]">
           <img class="object-contain w-full h-full drop-shadow-xl/1000 "
             src="./src/assets/hd_restoration_result_image.png" alt="Vehiculo verde">
