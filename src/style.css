@@ -2,29 +2,47 @@
 
 /* Tema claro */
 :root {
-    --color-fondo: #c6c6c6;
-    --color-text: #040316;
-    --color-primary: #608572;
-    --color-secondary: #c7cbb9;
-    --color-accent: #5979b1;
+    --color-fondo: #F0F0EF;
+    /* Asfalto de día — fondo general */
+    --color-text: #1A1A1A;
+    /* Casi negro — texto principal */
+    --color-primary: #2ECC40;
+    /* Verde PitCrew — botones, marca, links */
+    --color-primary-dark: #1A7A25;
+    /* Verde oscuro — hover y detalles */
+    --color-secondary: #E2E2E0;
+    /* Gris suave — tarjetas y contenedores */
+    --color-text-secondary: #5C5C5C;
+    /* Gris medio — subtítulos y textos secundarios */
+    --color-accent: #FFFFFF;
+    /* Blanco — tarjetas con sombra sutil */
 }
 
-/* Fondo oscuro */
+/* Fondo oscuro — Garage de noche */
 html.dark {
-    --color-fondo: #171717;
-    --color-text: #eae9fc;
-    --color-primary: #7a9f8c;
-    --color-secondary: #424634;
-    --color-accent: #4e6fa6;
+    --color-fondo: #141414;
+    /* Negro profundo — fondo general */
+    --color-text: #F0F0EF;
+    /* Casi blanco — texto principal */
+    --color-primary: #2ECC40;
+    /* Verde PitCrew — igual en ambos temas */
+    --color-primary-dark: #1A7A25;
+    /* Verde oscuro — hover y detalles */
+    --color-secondary: #1F1F1F;
+    /* Gris muy oscuro — secciones */
+    --color-text-secondary: #9A9A9A;
+    /* Gris claro — subtítulos */
+    --color-accent: #242424;
+    /* Gris oscuro — tarjetas con borde sutil */
 }
 
 @layer components {
     .cards {
-        @apply bg-fondo flex flex-col p-4;
+        @apply bg-secondary shadow-xl/50 rounded-md flex flex-col p-4 h-[320px] transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-90 hover:bg-accent;
     }
 
     .inter-cards {
-        @apply w-full flex flex-col p-0 m-0 text-left;
+        @apply w-full flex flex-col p-0 mt-auto text-left gap-4;
     }
 
     .card-title {
@@ -32,7 +50,7 @@ html.dark {
     }
 
     .card-subtitle {
-        @apply text-lg w-full tracking-widest;
+        @apply text-xl w-full tracking-widest;
     }
 
     .cont-svg {

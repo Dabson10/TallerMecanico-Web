@@ -67,7 +67,7 @@
           <path id="riel-titulo" d="M 50,120 C 45,200 430,140 470,260" fill="none" stroke="none" />
           <!-- subtema  -->
           <path id="riel-subtema" d="M 10,180 C 5,230 400,200 470,330" fill="none" stroke="none" stroke-width="2" />
-          <text class="font-estrella fill-text tracking-wide font-normal
+          <text class="font-estrella fill-primary tracking-wide font-normal
           text-9xl
           sm:text-[160px]
           md:text-[185px]
@@ -79,7 +79,7 @@
             </textPath>
           </text>
 
-          <text class="font-quarion fill-text tracking-widest uppercase
+          <text class="font-quarion fill-primary-dark tracking-widest uppercase
           text-2xl">
             <textPath href="#riel-subtema" startOffset="6%">
               Enchulamos tu vehiculo
@@ -103,67 +103,123 @@
       </div>
     </section>
     <!-- Segunda sección -->
-    <section class="w-full py-7 px-1.5 mt-10 h-full bg-accent gap-5 flex flex-col text-md">
+    <section class="w-full py-7 px-1.5 mt-10 h-full bg-secondary gap-5 flex text-md flex-col">
       <!-- Tarjetas de presentacion o orden de creacion de ordenes. -->
       <!-- Card-1 -->
-      <div class="cards">
-        <!-- Diseño del svg -->
-        <div class="cont-svg">
-          <svg class="lucide lucide-warehouse-icon lucide-warehouse size-9 " xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11" />
-            <path
-              d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z" />
-            <path d="M6 13h12" />
-            <path d="M6 17h12" />
-          </svg>
-        </div>
+      <div class=" w-full flex items-center justify-center">
+        <h5 class=" font-quarion text-2xl font-bold  px-4 py-2 rounded-xl shadow-xl/50 uppercase">¿Como funciona?
+        </h5>
+      </div>
+      <div class="flex flex-col w-full items-center gap-5  
+      md:grid md:grid-cols-2
+      lg:grid lg:grid-cols-3">
+        <div class="cards">
+          <!-- Diseño del svg -->
 
-        <div class="inter-cards">
-          <h1 class="card-title">
-            Tu auto entra
-          </h1>
-          <p class="card-subtitle">Registramos tus datos, vehiculo y asignamos al mecanico indicado</p>
+          <div class="inter-cards">
+            <h1 class="card-title">
+              Mantenimiento.
+            </h1>
+            <p class="card-subtitle">
+              Cambio de aceite, frenos, suspensión y todo lo que tu auto necesita para seguir rodando.
+            </p>
+          </div>
+        </div>
+        <!-- Card-2 -->
+        <div class="cards">
+          <!-- Diseño del svg -->
+
+          <div class="inter-cards">
+            <h1 class="card-title">
+              Reparación
+            </h1>
+            <p class="card-subtitle">Desde un detalle pequeño hasta una falla mayor, el crew lo resuelve sin rodeos.</p>
+          </div>
+        </div>
+        <!-- Card-3 -->
+        <div class="cards">
+          <!-- Diseño del svg -->
+
+          <div class="inter-cards">
+            <h1 class="card-title">
+              Seguimiento
+            </h1>
+            <p class="card-subtitle">Sigue tu orden en tiempo real. Sabes qué se hizo, qué se uso y cuanto costo.</p>
+          </div>
         </div>
       </div>
-      <!-- Card-2 -->
-      <div class="cards">
-        <!-- Diseño del svg -->
-        <div class="cont-svg">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-receipt-text-icon lucide-receipt-text size-7">
-            <path d="M13 16H8" />
-            <path d="M14 8H8" />
-            <path d="M16 12H8" />
-            <path
-              d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" />
-          </svg>
-        </div>
-
-        <div class="inter-cards">
-          <h1 class="card-title">
-            El crew trabaja
-          </h1>
-          <p class="card-subtitle">Seguimos cada detalle de la reparación en tiempo real.</p>
-        </div>
+    </section>
+    <!-- Tercera sección -->
+    <section class="w-full py-7 px-1.5 mt-10 h-full bg-secondary gap-5 flex text-md flex-col">
+      <!-- Tarjetas de presentacion o orden de creacion de ordenes. -->
+      <!-- Card-1 -->
+      <div class=" w-full flex items-center justify-center">
+        <h5 class=" font-quarion text-2xl font-bold  px-4 py-2 rounded-xl shadow-xl/50 uppercase">¿Como funciona?
+        </h5>
       </div>
-      <!-- Card-3 -->
-      <div class="cards">
-        <!-- Diseño del svg -->
-        <div class="cont-svg">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check size-7">
-            <path d="M20 6 9 17l-5-5" />
-          </svg>
-        </div>
+      <div class="flex flex-col w-full items-center gap-5  
+      md:grid md:grid-cols-2
+      lg:grid lg:grid-cols-3">
+        <div class="cards">
+          <!-- Diseño del svg -->
+          <div class="cont-svg">
+            <svg class="lucide lucide-warehouse-icon lucide-warehouse size-[65px]" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11" />
+              <path
+                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z" />
+              <path d="M6 13h12" />
+              <path d="M6 17h12" />
+            </svg>
+          </div>
 
-        <div class="inter-cards">
-          <h1 class="card-title">
-            Tu auto sale
-          </h1>
-          <p class="card-subtitle">Listo, revisado y con todo documentado.</p>
+          <div class="inter-cards">
+            <h1 class="card-title">
+              Tu auto entra
+            </h1>
+            <p class="card-subtitle">Registramos tus datos, vehiculo y asignamos al mecanico indicado</p>
+          </div>
+        </div>
+        <!-- Card-2 -->
+        <div class="cards">
+          <!-- Diseño del svg -->
+          <div class="cont-svg">
+            <svg class="lucide lucide-receipt-text-icon lucide-receipt-text size-[65px]"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 16H8" />
+              <path d="M14 8H8" />
+              <path d="M16 12H8" />
+              <path
+                d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" />
+            </svg>
+          </div>
+
+          <div class="inter-cards">
+            <h1 class="card-title">
+              El crew trabaja
+            </h1>
+            <p class="card-subtitle">Seguimos cada detalle de la reparación en tiempo real.</p>
+          </div>
+        </div>
+        <!-- Card-3 -->
+        <div class="cards">
+          <!-- Diseño del svg -->
+          <div class="cont-svg">
+            <svg class="lucide lucide-check-icon lucide-check size-[65px]" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+
+          <div class="inter-cards">
+            <h1 class="card-title">
+              Tu auto sale
+            </h1>
+            <p class="card-subtitle">Listo, revisado y con todo documentado.</p>
+          </div>
         </div>
       </div>
     </section>
