@@ -2,43 +2,60 @@
 
 /* Tema claro */
 :root {
-    --color-fondo: #F0F0EF;
-    /* Asfalto de día — fondo general */
-    --color-text: #1A1A1A;
-    /* Casi negro — texto principal */
-    --color-primary: #2ECC40;
-    /* Verde PitCrew — botones, marca, links */
-    --color-primary-dark: #1A7A25;
-    /* Verde oscuro — hover y detalles */
-    --color-secondary: #E2E2E0;
-    /* Gris suave — tarjetas y contenedores */
-    --color-text-secondary: #5C5C5C;
-    /* Gris medio — subtítulos y textos secundarios */
-    --color-accent: #FFFFFF;
-    /* Blanco — tarjetas con sombra sutil */
+    --color-text: #111618;
+    --color-textl: #FFFFFF;
+
+    --color-secClaro: #F0F4F8;
+    --color-cardClara: #FFFFFF;
+
+    --color-secAzul: #2A648B;
+    --color-cardAzul: #3A7CA5;
+
+    --color-secOscura: #1A2226;
+    --color-cardOscura: #2d3940;
+
+    --color-primary: #6FCF97;
+    --color-accent: #A6C1EE;
 }
 
 /* Fondo oscuro — Garage de noche */
 html.dark {
-    --color-fondo: #141414;
-    /* Negro profundo — fondo general */
-    --color-text: #F0F0EF;
-    /* Casi blanco — texto principal */
-    --color-primary: #2ECC40;
-    /* Verde PitCrew — igual en ambos temas */
-    --color-primary-dark: #1A7A25;
-    /* Verde oscuro — hover y detalles */
-    --color-secondary: #1F1F1F;
-    /* Gris muy oscuro — secciones */
-    --color-text-secondary: #9A9A9A;
-    /* Gris claro — subtítulos */
-    --color-accent: #242424;
-    /* Gris oscuro — tarjetas con borde sutil */
+    --color-text: #f0efe6d5;
+    /* Crema suave para textos principales sobre fondos oscuros (no lastima la vista) */
+    --color-textl: #f0efe6c5;
+    /* Negro grafito para cuando necesites texto oscuro en tarjetas claras */
+
+    /* --- BLOQUE 1: SECCIONES CLARAS (En modo oscuro se vuelven el fondo gris base) --- */
+    --color-secClaro: #1A2226;
+    /* Gris asfalto oscuro para el lienzo principal */
+    --color-cardClara: #242D32;
+    /* Gris un poco más claro para que las tarjetas resalten del fondo */
+
+    /* --- BLOQUE 2: SECCIONES AZULES (Se vuelven un azul noche profundo muy elegante) --- */
+    --color-secAzul: #132E42;
+    /* Azul noche oscuro para el contenedor grande */
+    --color-cardAzul: #1D435F;
+    /* Azul medio-oscuro para que las tarjetas contrasten adentro */
+
+    /* --- BLOQUE 3: SECCIONES OSCURAS (Un bloque de negro puro para romper el diseño) --- */
+    --color-secOscura: #0D1113;
+    /* Negro profundo para crear secciones de máximo contraste */
+    --color-cardOscura: #161D20;
+    /* Gris oscuro para las tarjetas de este bloque */
+
+    /* --- ACENTOS LLAMATIVOS EN LA NOCHE --- */
+    --color-primary: #10D970;
+    /* EL VERDE DEL CARRO: El verde brillante para que los logos, botones e iconos exploten en la oscuridad */
+    --color-accent: #7A9FC2;
 }
 
 @layer components {
     .cards {
-        @apply bg-secondary shadow-xl/50 rounded-md flex flex-col p-4 h-[320px] transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-90 hover:bg-accent;
+        @apply shadow-xl/50 rounded-md flex flex-col p-4 h-[320px];
+    }
+
+    .animacion {
+        @apply transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-90 hover:bg-accent;
     }
 
     .inter-cards {
@@ -55,6 +72,14 @@ html.dark {
 
     .cont-svg {
         @apply h-[80px];
+    }
+
+    .ocultar {
+        @apply hidden;
+    }
+
+    .svg-btn {
+        @apply size-10;
     }
 }
 
