@@ -18,34 +18,21 @@
     --color-accent: #A6C1EE;
 }
 
-/* Fondo oscuro — Garage de noche */
+/* Fondo oscuro */
 html.dark {
     --color-text: #f0efe6d5;
-    /* Crema suave para textos principales sobre fondos oscuros (no lastima la vista) */
     --color-textl: #f0efe6c5;
-    /* Negro grafito para cuando necesites texto oscuro en tarjetas claras */
 
-    /* --- BLOQUE 1: SECCIONES CLARAS (En modo oscuro se vuelven el fondo gris base) --- */
     --color-secClaro: #1A2226;
-    /* Gris asfalto oscuro para el lienzo principal */
     --color-cardClara: #242D32;
-    /* Gris un poco más claro para que las tarjetas resalten del fondo */
 
-    /* --- BLOQUE 2: SECCIONES AZULES (Se vuelven un azul noche profundo muy elegante) --- */
     --color-secAzul: #132E42;
-    /* Azul noche oscuro para el contenedor grande */
     --color-cardAzul: #1D435F;
-    /* Azul medio-oscuro para que las tarjetas contrasten adentro */
 
-    /* --- BLOQUE 3: SECCIONES OSCURAS (Un bloque de negro puro para romper el diseño) --- */
     --color-secOscura: #0D1113;
-    /* Negro profundo para crear secciones de máximo contraste */
     --color-cardOscura: #161D20;
-    /* Gris oscuro para las tarjetas de este bloque */
 
-    /* --- ACENTOS LLAMATIVOS EN LA NOCHE --- */
     --color-primary: #10D970;
-    /* EL VERDE DEL CARRO: El verde brillante para que los logos, botones e iconos exploten en la oscuridad */
     --color-accent: #7A9FC2;
 }
 
@@ -72,6 +59,10 @@ html.dark {
 
     .cont-svg {
         @apply h-[80px];
+    }
+
+    .img {
+        @apply object-cover w-full h-full;
     }
 
     .ocultar {

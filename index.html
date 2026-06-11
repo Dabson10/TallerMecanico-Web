@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="./src/assets/car-mechanic.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PitCrew</title>
 </head>
 
 <body class="bg-(--color-secClaro) p-0 m-0 w-screen h-screen flex flex-col font-quarion overflow-x-hidden text-text">
 
-  <!-- En circulo -->
+  <!-- Cabecera de la pagina web -->
   <header
     class=" w-full font-quarion sticky top-0 flex items-center justify-center gap-1 p-2 my-4 z-1000 bg-(--color-secClaro)/85">
     <!-- Contenedor que envuelve al las opciones principales. -->
@@ -20,8 +20,7 @@
       <!-- Contenedor 1 -->
       <div class="relative  flex items-center justify-center flex-row ">
         <p class="py-2 px-2 pr-6
-        text-2xl
-        ">Cliente</p>
+        text-2xl">Cliente</p>
         <div
           class="absolute -translate-y-1/2 -translate-x-1/2 bottom-[-92%] right-[-76%] border-dotted border-2 border-y-transparent border-r-transparent rounded-4xl w-[67px] h-[67px]">
         </div>
@@ -110,55 +109,69 @@
       </div>
     </section>
     <!-- Segunda sección -->
-    <section class="w-full py-7 px-1.5 mt-10 h-full bg-(--color-secAzul) gap-5 flex text-md flex-col">
-      <!-- Tarjetas de presentacion o orden de creacion de ordenes. -->
-      <!-- Card-1 -->
-      <div class=" w-full flex items-center justify-center">
-        <h5 class=" font-quarion text-2xl font-bold bg-(--color-cardAzul) px-4 py-2 rounded-xl shadow-xl/50 uppercase">
-          ¿QUÉ HACEMOS?
-        </h5>
+    <section class="w-full py-7 px-5 mt-10 h-full bg-(--color-secAzul) flex flex-col text-md justify-center ">
+      <div class=" shadow-xl/30 rounded-xl overflow-hidden sm:w-[75%] lg:w-[30%] m-auto">
+        <!-- Contenedor de las tarjetas. -->
+        <div class="flex">
+          <!-- Tarjeta 1 -->
+          <div data-card="1" class="cardCarrusel flex w-full flex-col bg-(--color-cardAzul)">
+            <div class="w-full">
+              <img class="img" src="./src/assets/mantenimiento.jpg" alt="">
+            </div>
+            <div>
+              <div class="p-5">
+                <h4 class="card-title">Mantenimiento</h4>
+                <p class="card-subtitle">Cambio de aceite, frenos, suspensión y todo lo que tu auto necesita para seguir
+                  rodando.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta 2 -->
+          <div data-card="2" class="cardCarrusel hidden flex w-full flex-col bg-(--color-cardAzul)">
+            <div class="w-full">
+              <img class="img" src="./src/assets/reparacion.jpg" alt="">
+            </div>
+            <div>
+              <div class="p-5">
+                <h4 class="card-title">Reparación</h4>
+                <p class="card-subtitle">Desde un detalle pequeño hasta una falla mayor, el crew lo resuelve sin rodeos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta 3 -->
+          <div data-card="3" class="cardCarrusel hidden flex w-full flex-col bg-(--color-cardAzul)">
+            <div class="w-full">
+              <img class="img" src="./src/assets/seguimiento.webp" alt="">
+            </div>
+            <div>
+              <div class="p-5">
+                <h4 class="card-title">Seguimiento</h4>
+                <p class="card-subtitle">Sigue tu orden en tiempo real. Sabes que se hizo, qué se uso y cuanto costo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Fin tarjetas. -->
+        </div>
+        <!-- Contenedore de los botones. -->
+        <div
+          class="flex justify-center items-center text-center bg-(--color-secOscura) text-(--color-textl) h-[50px] border border-[#dedede] rounded-b-xl overflow-hidden">
+          <p data-btncard="btnIzq"
+            class="btnCarrusel w-1/2 h-full cursor-pointer text-2xl font-bold flex items-center justify-center select-none transition-all duration-200 hover:bg-(--color-cardOscura) border-r">
+            &lt;
+          </p>
+
+          <p data-btncard="btnDer"
+            class="btnCarrusel w-1/2 h-full cursor-pointer text-2xl font-bold flex items-center justify-center select-none transition-all duration-200 hover:bg-(--color-cardOscura)">
+            &gt;
+          </p>
+        </div>
       </div>
-      <div class="flex flex-col w-full items-center gap-5  
-      md:grid md:grid-cols-2
-      lg:grid lg:grid-cols-3">
-        <div class="cards animacion bg-(--color-cardAzul)">
-          <!-- Diseño del svg -->
 
-          <div class="inter-cards">
-            <h1 class="card-title">
-              Mantenimiento.
-            </h1>
-            <p class="card-subtitle">
-              Cambio de aceite, frenos, suspensión y todo lo que tu auto necesita para seguir rodando.
-            </p>
-          </div>
-        </div>
-        <!-- Card-2 -->
-        <div class="cards animacion bg-(--color-cardAzul)">
-          <!-- Diseño del svg -->
-
-          <div class="inter-cards">
-            <h1 class="card-title">
-              Reparación
-            </h1>
-            <p class="card-subtitle">Desde un detalle pequeño hasta una falla mayor, el crew lo resuelve sin rodeos.</p>
-          </div>
-        </div>
-        <!-- Card-3 -->
-        <div class="cards animacion bg-(--color-cardAzul)">
-          <!-- Diseño del svg -->
-
-          <div class="inter-cards">
-            <h1 class="card-title">
-              Seguimiento
-            </h1>
-            <p class="card-subtitle">Sigue tu orden en tiempo real. Sabes qué se hizo, qué se uso y cuanto costo.</p>
-          </div>
-        </div>
-      </div>
     </section>
     <!-- Tercera sección -->
-    <section class="w-full py-7 px-1.5  h-full bg-(--color-secOscura) gap-5 flex text-md flex-col">
+    <section class=" w-full py-7 px-1.5 h-full bg-(--color-secOscura) gap-5 flex text-md flex-col">
       <!-- Tarjetas de presentacion o orden de creacion de ordenes. -->
       <!-- Card-1 -->
       <div class=" w-full flex items-center justify-center  text-(--color-textl)">
@@ -170,7 +183,7 @@
       <div class="flex flex-col w-full items-center gap-5  
       md:grid md:grid-cols-2
       lg:grid lg:grid-cols-3">
-        <div class="cards animacion bg-(--color-cardOscura) text-(--color-textl)">
+        <div class="cards animacion bg-(--color-cardOscura) shadow-(--color-cardOscura) text-(--color-textl)">
           <!-- Diseño del svg -->
           <div class="cont-svg">
             <svg class="lucide lucide-warehouse-icon lucide-warehouse size-[65px]" xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +250,7 @@
     <footer class="mt-auto py-3 bg-primary ">
       <div class="flex flex-col items-center justify-center">
         <p>Taller mecanico | ®PitCrew 2026</p>
-        <p>Esta pagina web fue creada por <a class="hover:underline hover:decoration-3 hover:decoration-pink-500"
+        <p>Esta pagina web fue creada por <a class="text- hover:underline hover:decoration-3 hover:decoration-pink-500"
             href="https://github.com/Dabson10">Dabson</a>
         </p>
       </div>
