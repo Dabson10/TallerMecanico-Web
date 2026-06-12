@@ -32,15 +32,36 @@
                 <label class="text-sm font-bold uppercase tracking-wider  mb-2" for="email">
                     Correo electrónico
                 </label>
-                <input id="email"
+                <input id="email" placeholder="example@gmail.com"
                     class="border border-white/20 bg-white/5 rounded-xl p-3 mb-5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
 
 
                 <label class=" text-sm font-bold uppercase tracking-wider mb-2" for="">Contraseña</label>
                 <div
                     class="border border-white/40 bg-white/5 rounded-xl p-3 mb-8 flex items-center focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
-                    <input id="password" class="w-full bg-transparent focus:outline-none " type="password"
-                        placeholder="••••••••" required>
+                    <input id="pass-cre" data-input="iniciar" class="w-full bg-transparent focus:outline-none "
+                        type="password" placeholder="••••••••" required>
+                    <div>
+                        <!-- Ojo abierto -->
+                        <svg id="btn-svg" data-svg="abierto-iniciar" class="lucide lucide-eye-icon lucide-eye"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <!-- Ojo cerrado -->
+                        <svg id="btn-svg" data-svg="cerrado-iniciar"
+                            class="lucide lucide-eye-closed-icon lucide-eye-closed hidden"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-.722-3.25" />
+                            <path d="M2 8a10.645 10.645 0 0 0 20 0" />
+                            <path d="m20 15-1.726-2.05" />
+                            <path d="m4 15 1.726-2.05" />
+                            <path d="m9 18 .722-3.25" />
+                        </svg>
+                    </div>
                 </div>
 
                 <button type="button" id="btn-logIn"
@@ -96,8 +117,30 @@
                 </label>
                 <div
                     class="border border-white/40 bg-white/5 rounded-xl p-3 mb-6 flex items-center focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
-                    <input type="password" id="password" placeholder="••••••••" required
+                    <input id="pass-cre" data-input="crear" type="password" placeholder="••••••••••" required
                         class="w-full bg-transparent focus:outline-none text-sm">
+                    <div>
+                        <!-- Ojo abierto -->
+                        <svg id="btn-svg" data-svg="abierto-crear"
+                            class="lucide lucide-eye-icon lucide-eye hover:stroke-primary"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <!-- Ojo cerrado -->
+                        <svg id="btn-svg" data-svg="cerrado-crear"
+                            class="lucide lucide-eye-closed-icon lucide-eye-closed hover:stroke-primary hidden"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m15 18-.722-3.25" />
+                            <path d="M2 8a10.645 10.645 0 0 0 20 0" />
+                            <path d="m20 15-1.726-2.05" />
+                            <path d="m4 15 1.726-2.05" />
+                            <path d="m9 18 .722-3.25" />
+                        </svg>
+                    </div>
                 </div>
 
                 <!-- Botón de acción -->
