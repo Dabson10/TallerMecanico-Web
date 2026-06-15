@@ -1,8 +1,25 @@
 import '../main.js'
 
+
+// Ocultar el input de nuemero de telefono y el apeliido  para tecnicos.
+//Obtenemos la URL pero en especifico despues del "?" osea los valores pasados por parametro
+const pregunta = window.location.search;
+//Ahora instanciamos sobre pregunta para poder obtener los valores del parametro.
+const parametro = new URLSearchParams(pregunta);
+//Obtenemos el parametro de rol
+const rol = parametro.get("rol");
+//Ahora debemos buscar los inputs que no usaran los tecnicos.
+const inputsCliente = document.querySelectorAll('.cliente');
+if (rol === "tecnico") {
+    inputsCliente.forEach(inp => {
+        inp.classList.toggle('hidden');
+    });
+}
+
+
+
 // Mostrar contraseña
 const svgBtns = document.querySelectorAll('#btn-svg');
-const inpPass = document.querySelectorAll('#pass-cre');
 
 //Recorre los botoenes y verifica en cual sera su dirección.
 svgBtns.forEach(btn => {

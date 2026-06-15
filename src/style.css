@@ -82,6 +82,16 @@ html.dark {
     .ocultar {
         @apply p-0 m-0 transition-all duration-100 ease-in-out opacity-0 max-h-0 overflow-hidden pointer-events-none;
     }
+
+    /* Clase auxiliar para ocultar vistas suavemente */
+    .fade-in {
+        animation: fadeIn 0.3s ease-in-out;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Fuente de estrella. */
@@ -109,6 +119,13 @@ html.dark {
     /* Plantilla de colores.  */
     --color-fondo: var(--color-fondo);
     --color-text: var(--color-text);
+    --color-textl: var(--color-textl);
+    --color-secClaro: var(--color-secClaro);
+    --color-cardClara: var(--color-cardClara);
+    --color-secAzul: var(--color-secAzul);
+    --color-cardAzul: var(--color-cardAzul);
+    --color-secOscura: var(--color-secOscura);
+    --color-cardOscura: var(--color-cardOscura);
     --color-primary: var(--color-primary);
     --color-secondary: var(--color-secondary);
     --color-accent: var(--color-accent);

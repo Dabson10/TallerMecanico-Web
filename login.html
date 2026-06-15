@@ -20,7 +20,9 @@
         <div class="flex flex-col items-center justify-center w-full h-full px-5">
             <!-- Card del login o registro. -->
             <!-- login -->
-            <form data-form="iniciar" class="formulario ocultar" id="formLog" action="">
+            <a href="cliente.html">Cliente</a>
+            <a href="tecnico.html">tecnico</a>
+            <form data-form="iniciar" class="formulario" id="formLog" action="">
 
                 <h4 class="text-3xl font-bold tracking-tight mb-2">
                     Iniciar sesión
@@ -32,15 +34,16 @@
                 <label class="text-sm font-bold uppercase tracking-wider  mb-2" for="email">
                     Correo electrónico
                 </label>
-                <input id="email" placeholder="example@gmail.com"
+                <input id="email" placeholder="example@gmail.com" name="correo"
                     class="border border-white/20 bg-white/5 rounded-xl p-3 mb-5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
 
 
                 <label class=" text-sm font-bold uppercase tracking-wider mb-2" for="">Contraseña</label>
                 <div
                     class="border border-white/40 bg-white/5 rounded-xl p-3 mb-8 flex items-center focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
-                    <input id="pass-cre" data-input="iniciar" class="w-full bg-transparent focus:outline-none "
-                        type="password" placeholder="••••••••" required>
+                    <input name="clave" id="pass-cre" data-input="iniciar"
+                        class="w-full bg-transparent focus:outline-none " type="password" placeholder="••••••••"
+                        required>
                     <div>
                         <!-- Ojo abierto -->
                         <svg id="btn-svg" data-svg="abierto-iniciar" class="lucide lucide-eye-icon lucide-eye"
@@ -74,7 +77,7 @@
                 </p>
             </form>
             <!-- SigIn -->
-            <form data-form="crear" class="formulario " id="formLog" action="">
+            <form data-form="crear" class="formulario ocultar" id="formLog" action="">
 
                 <h4 class="text-3xl font-bold tracking-tight mb-1">
                     Crear cuenta
@@ -94,7 +97,7 @@
                             class="border border-white/20 bg-white/5 rounded-xl p-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-full text-sm">
                     </div>
 
-                    <div class="flex-1 flex flex-col">
+                    <div class="cliente flex-1 flex flex-col">
                         <label class="text-xs font-bold uppercase tracking-wider mb-2" for="userLastName">
                             Apellido
                         </label>
@@ -103,6 +106,12 @@
                     </div>
 
                 </div>
+                <!-- Numero de telefono -->
+                <label class="cliente text-xs font-bold uppercase tracking-wider mb-2" for="userTel">
+                    Numero de telefono
+                </label>
+                <input type="tel" id="userTel" placeholder="0000000000" required
+                    class="cliente border border-white/20 bg-white/5 rounded-xl p-3 mb-4 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm">
 
                 <!-- Correo electrónico -->
                 <label class="text-xs font-bold uppercase tracking-wider mb-2" for="userEmail">
