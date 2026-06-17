@@ -88,13 +88,13 @@
             <div id="view-vehicle" class="view-section fade-in">
                 <header class="flex justify-between items-center mb-8">
                     <div>
-                        <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-(--color-text)">Hola, Tadeo</h1>
+                        <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-(--color-text)">Hola, <span
+                                id="usuario" data-usuario="nombre"></span></h1>
                         <p class="text-(--color-text)/70 text-sm md:text-base mt-1 font-medium">Aquí está el resumen de
                             tu vehículo.</p>
                     </div>
-                    <div
+                    <div id="icon"
                         class="w-12 h-12 bg-(--color-accent)/30 rounded-full flex items-center justify-center text-(--color-cardAzul) font-bold text-xl shadow-sm border border-(--color-accent)">
-                        T
                     </div>
                 </header>
 
@@ -108,12 +108,12 @@
                                 Vehículo en Taller
                             </div>
 
-                            <h2 class="text-3xl md:text-4xl font-bold mb-2">Ford Mustang GT</h2>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-2" data-vehiculo="modelo" id="vehiculo"></h2>
                             <div
                                 class="flex flex-wrap items-center gap-3 text-(--color-textl)/70 text-xs md:text-sm font-semibold uppercase tracking-widest mb-8">
-                                <span>Placa: XYZ-1234</span>
+                                <span>Placa: <span data-vehiculo="placas" id="vehiculo"></span></span>
                                 <span class="w-1.5 h-1.5 bg-(--color-textl)/50 rounded-full"></span>
-                                <span>VIN: 1FA6P8CF...</span>
+                                <span>Marca: <span data-vehiculo="marca" id="vehiculo"></span></span>
                             </div>
 
                             <div
@@ -184,7 +184,7 @@
                     </div>
                 </header>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div id="ordenes" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     <!-- Orden 1 -->
                     <div
@@ -280,23 +280,25 @@
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div
                         class="md:col-span-4 bg-(--color-cardClara) rounded-3xl p-8 shadow-sm flex flex-col items-center text-center border border-(--color-cardClara)">
-                        <div
+                        <div id="icon"
                             class="w-24 h-24 bg-(--color-accent)/30 rounded-full flex items-center justify-center text-(--color-cardAzul) font-bold text-4xl mb-4 border-4 border-(--color-accent)/20">
-                            T
+
                         </div>
-                        <h2 class="text-2xl font-bold text-(--color-text) mb-1">Tadeo Pérez</h2>
-                        <p class="text-(--color-text)/60 text-sm font-medium mb-6">Cliente Diamante</p>
+                        <h2 class="text-2xl font-bold text-(--color-text) mb-1" id="usuario" data-usuario="nombre"></h2>
+                        <!-- <p class="text-(--color-text)/60 text-sm font-medium mb-6">Cliente Diamante</p> -->
 
                         <div class="w-full bg-(--color-secClaro) rounded-2xl p-4 text-left mb-6">
                             <div class="mb-3">
                                 <p class="text-[10px] text-(--color-text)/50 font-bold uppercase tracking-widest">
                                     Teléfono</p>
-                                <p class="text-sm font-semibold text-(--color-text)">+52 55 1234 5678</p>
+                                <p class="text-sm font-semibold text-(--color-text)" id="usuario"
+                                    data-usuario="telefono">+52 55 1234 5678</p>
                             </div>
                             <div>
                                 <p class="text-[10px] text-(--color-text)/50 font-bold uppercase tracking-widest">Email
                                 </p>
-                                <p class="text-sm font-semibold text-(--color-text)">tadeo@correo.com</p>
+                                <p class="text-sm font-semibold text-(--color-text)" id="usuario" data-usuario="correo">
+                                    tadeo@correo.com</p>
                             </div>
                         </div>
 
@@ -327,10 +329,11 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-(--color-text)">Ford Mustang GT 2020</h4>
+                                        <h4 class="font-bold text-(--color-text)" id="vehiculo" data-vehiculo="modelo">
+                                            Ford Mustang GT 2020</h4>
                                         <p
                                             class="text-xs font-semibold text-(--color-text)/60 uppercase tracking-widest mt-1">
-                                            Placa: XYZ-1234</p>
+                                            Placa: <span id="vehiculo" data-vehiculo="placas"></span></p>
                                     </div>
                                 </div>
                                 <button
@@ -338,14 +341,14 @@
                                     Expediente</button>
                             </div>
 
-                            <button
+                            <!-- <button
                                 class="mt-4 flex items-center justify-center gap-2 w-full border-2 border-dashed border-(--color-accent) text-(--color-text)/60 font-bold py-4 rounded-2xl hover:bg-(--color-secClaro) hover:border-(--color-primary) hover:text-(--color-secAzul) transition-all">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M12 4v16m8-8H4"></path>
                                 </svg>
                                 Añadir Vehículo
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                 </div>

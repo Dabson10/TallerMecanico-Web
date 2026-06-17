@@ -1,5 +1,30 @@
 import '../main.js'
+import { traerCliente } from './services/cuentasAuth.js';
+//Tenemos dos JSON para poder conectarse rapido a los datos del usuario.
+const clienteLog = 'sadractadeo19@gmail.com';
+const tecnicoLog = 'juan_mecanico@gmail.com';
+// import '../../.cliente.html'
 
+
+
+//Vamos a hacer una validación simple antes de pasar a la pagina web de cada rol.
+const btnCliente = document.getElementById('btnCliente');
+const btnTecnico = document.getElementById('btnTecnico');
+
+clienteDatos();
+async function clienteDatos() {
+    try {
+        btnCliente.addEventListener('click', async () => {
+            //Ahora pasamos el JSON con las contraseñas 
+            const clienteDatos = await traerCliente(clienteLog);
+            console.log(clienteDatos);
+            sessionStorage.setItem("usuario", JSON.stringify(clienteDatos));
+            window.location.href = '../../cliente.html';
+        });
+    } catch (error) {
+        console.log(`Error del tipo: ${error}`);
+    }
+}
 
 // Ocultar el input de nuemero de telefono y el apeliido  para tecnicos.
 //Obtenemos la URL pero en especifico despues del "?" osea los valores pasados por parametro
@@ -68,9 +93,7 @@ function cambioSimple(dataBtn, btn, localizado) {
 
 const cambioBtn = document.querySelectorAll('#btncambio');
 const formularios = document.querySelectorAll('.formulario');
-if (cambioBtn) {
-    console.log('éxiste')
-}
+
 
 cambioBtn.forEach(btn => {
     btn.addEventListener('click', () => {

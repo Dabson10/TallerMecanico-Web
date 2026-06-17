@@ -16,6 +16,10 @@
 
     --color-primary: #6FCF97;
     --color-accent: #A6C1EE;
+    /* Ordenes entregadas. */
+    --color-entregado: #bda6ce;
+    /* Ordeners nuevas o recibidas.  */
+    --color-recibidos: #CB2957;
 }
 
 /* Fondo oscuro */
@@ -31,9 +35,15 @@ html.dark {
 
     --color-secOscura: #0D1113;
     --color-cardOscura: #161D20;
-
+    /* Estos colores tambien serviran para el status de las ordenes. */
+    /* Sirve tambien como orden entregado */
     --color-primary: #10D970;
+    /* Sirve para pedidos listos*/
     --color-accent: #7A9FC2;
+    /* Ordenes en proceso. */
+    --color-pendiente: #f7e49b;
+    /* Ordenes nuevas o recibidas. */
+    --color-recibidos: #CB2957;
 }
 
 @layer components {
@@ -90,8 +100,15 @@ html.dark {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Fuente de estrella. */
