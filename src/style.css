@@ -17,7 +17,7 @@
     --color-primary: #6FCF97;
     --color-accent: #A6C1EE;
     /* Ordenes entregadas. */
-    --color-entregado: #bda6ce;
+    --color-proceso: #f7e49b;
     /* Ordeners nuevas o recibidas.  */
     --color-recibidos: #CB2957;
 }
@@ -41,7 +41,7 @@ html.dark {
     /* Sirve para pedidos listos*/
     --color-accent: #7A9FC2;
     /* Ordenes en proceso. */
-    --color-pendiente: #f7e49b;
+    --color-proceso: #f7e49b;
     /* Ordenes nuevas o recibidas. */
     --color-recibidos: #CB2957;
 }

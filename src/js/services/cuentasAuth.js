@@ -1,4 +1,4 @@
-const URL = 'https://tallermecanico-cn4o.onrender.com/client'
+const URL = 'http://localhost:8080/client'
 //Buscamos un cliente mediante su correo electronico
 export async function traerCliente(correo) {
     const respuesta = await fetch(`${URL}/${correo}/get`, {
