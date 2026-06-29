@@ -5,12 +5,11 @@ import '../main.js'
 // Retrieve the logged-in user data from sessionStorage
 const datos = sessionStorage.getItem('usuario');
 
-// Parse JSON if data exists, otherwise redirect to login page
+
 let datosJ = null;
 if (datos) {
     datosJ = JSON.parse(datos);
 } else {
-    // No user data, likely not logged in – redirect to login
     window.location.href = '../../login.html';
 }
 console.log(datosJ);

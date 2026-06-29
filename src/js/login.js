@@ -1,5 +1,5 @@
 import '../main.js'
-import { traerCliente } from './services/cuentasAuth.js';
+import { traerCliente, traerTecnico } from './services/cuentasAuth.js';
 //Tenemos dos JSON para poder conectarse rapido a los datos del usuario.
 const clienteLog = 'sadractadeo19@gmail.com';
 const tecnicoLog = 'juan_mecanico@gmail.com';
@@ -12,18 +12,27 @@ const btnCliente = document.getElementById('btnCliente');
 const btnTecnico = document.getElementById('btnTecnico');
 
 clienteDatos();
+tecnicoDatos();
 async function clienteDatos() {
     try {
         btnCliente.addEventListener('click', async () => {
             //Ahora pasamos el JSON con las contraseñas 
             const clienteDatos = await traerCliente(clienteLog);
-            console.log(clienteDatos);
             sessionStorage.setItem("usuario", JSON.stringify(clienteDatos));
             window.location.href = '../../cliente.html';
         });
     } catch (error) {
-        console.log(`Error del tipo: ${error}`);
+        console.error(`Error del tipo: ${error}`);
     }
+}
+async function tecnicoDatos() {
+    try {
+        btnTecnico.addEventListener('click', async () => {
+            const datosT = await traerTecnico(tecnicoLog);
+            sessionStorage.setItem('tecnico', JSON.stringify(datosT));
+            window.location.href = '../../tecnico.html';
+        })
+    } catch (error) { console.error(error) }
 }
 
 // Ocultar el input de nuemero de telefono y el apeliido  para tecnicos.
